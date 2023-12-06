@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.scss';
+import './index.scss.hbs.hbs';
 import Button from './button/index';
 import reportWebVitals from './reportWebVitals';
 import Icon from "./icon";
