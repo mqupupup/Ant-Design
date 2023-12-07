@@ -3,14 +3,14 @@ import classNames from 'classnames';
 
 import './index.scss';
 
-export interface  RadioProps extends React.HTMLAttributes<HTMLDivElement>{
+export interface  {{componentName}}Props extends React.HTMLAttributes<HTMLInputElement>{
     className ?: string;
     type ?: 'normal' | 'primary' |'text'|'link'|'dashed';
     size ?: 'small' | 'medium' | 'large';
     children ?: ReactNode;
     style ?: CSSProperties;
 };
-const Radio =  (props:RadioProps) => {
+const {{componentName}} =  (props:{{componentName}}Props) => {
     const {className, type = 'normal', size = "medium", children,style
         ,...others} = props;
     const clc = classNames({
@@ -19,7 +19,7 @@ const Radio =  (props:RadioProps) => {
         [`ant-btn-${size}`]: size,
         [className as string]: !!className,
     })
-    return <Radio {...others} className={clc} style={style} >{props.children}</Radio>
+    return <span {...others} className={clc} style={style} >{props.children}</span>
 
 }
-export default Radio;
+export default {{componentName}};

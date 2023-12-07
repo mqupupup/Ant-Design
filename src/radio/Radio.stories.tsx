@@ -25,24 +25,24 @@ type Story = StoryObj<typeof meta>;
 // More on writing Radio with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary: Story = {
   args: {
-    type:'primary',
     children:'Radio',
   },
 };
-
-const style={
-  marginLeft: 8
-}
 
 export const Basic = () => {
   return <>
-    <Radio type="primary">Primary Radio</Radio>
+    <Radio onChange={e => {console.log(e)}}>Primary Radio</Radio>
   </>
 }
 
-export const Secondary: Story = {
-  args: {
-    children:'Radio',
-  },
+export const unchecked = () => {
+  return <>
+    <Radio checked={false}>unChecked Radio</Radio>
+  </>
 };
 
+export const disabled = () => {
+  return <>
+    <Radio disabled={true}>disabled Radio</Radio>
+  </>
+};

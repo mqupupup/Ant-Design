@@ -9,6 +9,24 @@ describe('Radio',() => {
         expect(linkElement).toBeInTheDocument();
     });
 
+    test('wheather support onchange', () => {
+        const onChange = jest.fn();
+        render(<Radio onChange={onChange}>Click me</Radio>);
+        const linkElement = screen.getByText(/Click me/i);
+        fireEvent.click(linkElement);
+
+        expect(onChange).toBeCalled();
+    });
+
+    test('wheather support underControl', () => {
+        const onChange = jest.fn();
+        render(<Radio onChange={onChange}>Click me</Radio>);
+        const linkElement = screen.getByText(/Click me/i);
+        fireEvent.click(linkElement);
+
+        expect(onChange).toBeCalledTimes(1);
+    });
+
 /**
     test('renders Primary Radio', () => {
         const {container} = render(<Radio type={"primary"}>Click me</Radio>);
