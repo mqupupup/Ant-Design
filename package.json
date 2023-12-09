@@ -68,6 +68,7 @@
     "jest-dom": "^4.0.0",
     "prop-types": "^15.8.1",
     "react-testing-library": "^8.0.1",
+    "resize-observer-polyfill": "^1.5.1",
     "sass": "^1.69.5",
     "storybook": "^7.6.3",
     "webpack": "^5.89.0"
